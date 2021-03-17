@@ -16,7 +16,9 @@ async function bootstrap() {
     'http://app-8c28d2f9-3afa-4776-a71f-1a78d26bd1c2.cleverapps.io',
     'http://app-8c28d2f9-3afa-4776-a71f-1a78d26bd1c2.cleverapps.io/',
     'http://app-c8439bf1-32fb-4dda-a15c-f574fb023d50.cleverapps.io',
-    'http://app-c8439bf1-32fb-4dda-a15c-f574fb023d50.cleverapps.io/'
+    'http://app-c8439bf1-32fb-4dda-a15c-f574fb023d50.cleverapps.io/',
+    'http://app-c8439bf1-32fb-4dda-a15c-f574fb023d50.cleverapps.io/#/',
+    'http://app-c8439bf1-32fb-4dda-a15c-f574fb023d50.cleverapps.io/#'
   ];
 
   const corsOptions = {
