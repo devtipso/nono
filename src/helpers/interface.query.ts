@@ -9,3 +9,11 @@ export class getReceptionObject {
     start: string;
     end: string;
 }
+
+export class searchParamsContarts {
+    entretien?: boolean;
+    location?: boolean;
+    code?: string;
+    date?: Omit<getReceptionObject, "site">
+    etat?: string;
+}
