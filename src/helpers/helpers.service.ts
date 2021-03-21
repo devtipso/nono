@@ -84,4 +84,14 @@ export const editFileName = (req, file, callback) => {
     callback(null, `${name}${fileExtName}`);
 };
 
+export const InitQueryData = async (data: unknown): Promise<unknown> => {
+    Object.keys(data).forEach(key => {
+        const value = data[key];
+        if (value.length < 1) {
+            data[key] = "%"
+        }
+    });
+
+    return await data
+}
 export const dir = './sources';
