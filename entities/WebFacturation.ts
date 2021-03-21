@@ -35,6 +35,9 @@ export class WebFacturation {
   @Column("date", { name: "decheance_wfact", nullable: true })
   decheanceWfact: string | null;
 
+  @Column("int", { name: "alert_decheance_wfact", default: () => "'10'" })
+  alertDecheanceWfact: number;
+
   @Column("varchar", { name: "listebl_wfact", nullable: true, length: 500 })
   listeblWfact: string | null;
 

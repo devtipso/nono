@@ -94,4 +94,5 @@ export const InitQueryData = async (data: unknown): Promise<unknown> => {
 
     return await data
 }
+
 export const dir = './sources';

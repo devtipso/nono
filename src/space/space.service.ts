@@ -29,11 +29,11 @@ export class SpaceService {
             u.prenom_wuser ,
             u.accesespace_wuser ,
             u.etat_wuser
-            FROM web_users AS u 
+        FROM web_users AS u 
             INNER JOIN web_contrats AS c ON u.refacteur_wuser = c.refacteur_wcontrat
             INNER JOIN web_acteurs_sites AS s ON u.refsite_wuser = s.ref_wsiteacteur
             INNER JOIN web_acteurs_sites_departements AS d ON u.refdep_wuser = d.ref_wdepsite
-            WHERE u.refacteur_wuser = ${refacteurWuser} 
+        WHERE u.refacteur_wuser = ${refacteurWuser} 
             AND s.ref_wsiteacteur LIKE '${search.site}' 
             AND c.refcontrat_wcontrat LIKE '${search.contrat}' 
             AND d.ref_wdepsite LIKE '${search.dept}'

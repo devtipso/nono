@@ -30,14 +30,14 @@ import { ContartsModule } from './contarts/contarts.module';
     }),
     TypeOrmModule.forRoot({
       "type": "mariadb",
-      "host": "b9omf6ziddw3fdjfsbrr-mysql.services.clever-cloud.com",
+      "host": "localhost",
       "port": 3306,
-      "username": "usucikudzvk7xcyv",
-      "password": "WnNyQbnjDaXdHcMTimRE",
-      "database": "b9omf6ziddw3fdjfsbrr",
+      "username": "root",
+      "password": "",
+      "database": "auclairm_espaceclient",
       "synchronize": false,
       "entities": [
-        "./dist/entities/*{.ts,.js}"
+        "./entities/*{.ts,.js}"
       ]
     }
     ),
@@ -64,4 +64,17 @@ import { ContartsModule } from './contarts/contarts.module';
     }
   ]
 })
-export class AppModule { }
+export class AppModule {
+  // {
+  //   "type": "mariadb",
+  //   "host": "b9omf6ziddw3fdjfsbrr-mysql.services.clever-cloud.com",
+  //   "port": 3306,
+  //   "username": "usucikudzvk7xcyv",
+  //   "password": "WnNyQbnjDaXdHcMTimRE",
+  //   "database": "b9omf6ziddw3fdjfsbrr",
+  //   "synchronize": false,
+  //   "entities": [
+  //     "./entities/*{.ts,.js}"
+  //   ]
+  // }
+}

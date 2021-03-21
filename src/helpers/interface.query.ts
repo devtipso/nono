@@ -5,9 +5,9 @@ export class InterfaceQuery {
 }
 
 export class getReceptionObject {
-    site: number;
-    start: string;
-    end: string;
+    site?: number;
+    start?: string;
+    end?: string;
 }
 
 export class searchParamsContarts {
