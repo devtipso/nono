@@ -1,3 +1,4 @@
+import { HelpersModule } from './../helpers/helpers.module';
 import { WebContrats } from './../../entities/WebContrats';
 import { Module } from '@nestjs/common';
 import { ContartsController } from './contarts.controller';
@@ -9,6 +10,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
   imports: [
     PassportModule.register({ defaultStrategy: 'jwt' }),
     TypeOrmModule.forFeature([WebContrats]),
+    HelpersModule
   ],
   controllers: [ContartsController],
   providers: [ContartsService]
