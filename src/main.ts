@@ -14,7 +14,9 @@ async function bootstrap() {
     'https://apis.cleverapps.io/',
     'https://apis.cleverapps.io',
     'http://app-c8439bf1-32fb-4dda-a15c-f574fb023d50.cleverapps.io/',
-    'http://app-c8439bf1-32fb-4dda-a15c-f574fb023d50.cleverapps.io'
+    'http://app-c8439bf1-32fb-4dda-a15c-f574fb023d50.cleverapps.io',
+    'https://myauclair.cleverapps.io/',
+    'https://myauclair.cleverapps.io'
   ];
 
   const corsOptions = {
