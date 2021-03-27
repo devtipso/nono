@@ -30,17 +30,16 @@ import { ContartsModule } from './contarts/contarts.module';
     }),
     TypeOrmModule.forRoot({
       "type": "mariadb",
-      "host": "localhost",
+      "host": "b9omf6ziddw3fdjfsbrr-mysql.services.clever-cloud.com",
       "port": 3306,
-      "username": "root",
-      "password": "",
-      "database": "auclairm_espaceclient",
+      "username": "usucikudzvk7xcyv",
+      "password": "WnNyQbnjDaXdHcMTimRE",
+      "database": "b9omf6ziddw3fdjfsbrr",
       "synchronize": false,
       "entities": [
-        "./entities/*{.ts,.js}"
+        "dist/entities/*{.ts,.js}"
       ]
-    }
-    ),
+    }),
     AuthModule,
     PassageModule,
     FonctionnelleInfosModule,

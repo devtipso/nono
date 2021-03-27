@@ -1,3 +1,4 @@
+import { WebFacturationDetail } from './../../entities/WebFacturationDetail';
 import { WebUsers } from './../../entities/WebUsers';
 import { HelpersModule } from './../helpers/helpers.module';
 import { WebFacturation } from './../../entities/WebFacturation';
@@ -10,7 +11,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 @Module({
   imports: [
     PassportModule.register({ defaultStrategy: 'jwt' }),
-    TypeOrmModule.forFeature([WebFacturation, WebUsers]),
+    TypeOrmModule.forFeature([WebFacturation, WebFacturationDetail, WebUsers]),
     HelpersModule
   ],
   controllers: [FacturationController],

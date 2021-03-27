@@ -28,4 +28,9 @@ export class HelpersController {
     getDepartementsBySiteID(@Param('id') id: number): Promise<unknown> {
         return this.srv.departementsBySiteID(id)
     }
+
+    @Get('/facture-etats')
+    getEtatsFacture(@GetUser() user: WebUsers): Promise<unknown> {
+        return this.srv.etatsFacture(user.refacteurWuser)
+    }
 }

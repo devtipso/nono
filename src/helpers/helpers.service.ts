@@ -1,3 +1,4 @@
+import { WebFacturation } from './../../entities/WebFacturation';
 import { WebActeursSitesDepartements } from './../../entities/WebActeursSitesDepartements';
 import { WebContrats } from './../../entities/WebContrats';
 import { Repository } from 'typeorm';
@@ -17,6 +18,7 @@ export class HelpersService {
         @InjectRepository(WebActeursSites) private repoSites: Repository<WebActeursSites>,
         @InjectRepository(WebContrats) private repoContrats: Repository<WebContrats>,
         @InjectRepository(WebActeursSitesDepartements) private repoDepartements: Repository<WebActeursSitesDepartements>,
+        @InjectRepository(WebFacturation) private repoWebFacture: Repository<WebFacturation>,
     ) { }
 
     // Get Date now - 30 days
@@ -60,6 +62,17 @@ export class HelpersService {
         const res = []
         res.push({ refWdepsite: 0, intituleWdepsite: "Tous" })
         res.push(...await this.repoDepartements.find({ select: ['refWdepsite', 'intituleWdepsite'], where: { refsiteWdepsite }, order: { ordreWdepsite: 'ASC' } }))
+        return { res }
+    }
+
+    public async etatsFacture(id: number): Promise<unknown> {
+        const res = []
+        const query = `SELECT f.etat_wfact as etat FROM web_facturation AS f 
+        INNER JOIN web_facturation_detail AS fd
+        ON f.reffact_wfact = fd.reffact_wdfactbl
+        WHERE f.refacteur_wfact = '${id}' GROUP BY f.etat_wfact`
+        res.push({ etat: "Tous" })
+        res.push(...await this.repoWebFacture.query(query))
         return { res }
     }
 

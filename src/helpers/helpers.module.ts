@@ -1,3 +1,4 @@
+import { WebFacturation } from './../../entities/WebFacturation';
 import { WebActeursSitesDepartements } from './../../entities/WebActeursSitesDepartements';
 import { WebContrats } from './../../entities/WebContrats';
 import { WebActeursSites } from './../../entities/WebActeursSites';
@@ -9,7 +10,7 @@ import { PassportModule } from '@nestjs/passport';
 
 @Module({
     imports: [
-        TypeOrmModule.forFeature([WebActeursSites, WebContrats, WebActeursSitesDepartements]),
+        TypeOrmModule.forFeature([WebActeursSites, WebContrats, WebActeursSitesDepartements, WebFacturation]),
         PassportModule.register({ defaultStrategy: 'jwt' })
     ],
     exports: [HelpersService],
