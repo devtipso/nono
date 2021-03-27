@@ -64,16 +64,5 @@ import { ContartsModule } from './contarts/contarts.module';
   ]
 })
 export class AppModule {
-  // {
-  //   "type": "mariadb",
-  //   "host": "b9omf6ziddw3fdjfsbrr-mysql.services.clever-cloud.com",
-  //   "port": 3306,
-  //   "username": "usucikudzvk7xcyv",
-  //   "password": "WnNyQbnjDaXdHcMTimRE",
-  //   "database": "b9omf6ziddw3fdjfsbrr",
-  //   "synchronize": false,
-  //   "entities": [
-  //     "./entities/*{.ts,.js}"
-  //   ]
-  // }
+
 }
