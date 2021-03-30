@@ -1,0 +1,3 @@
+{
+    "exec": "rm -rf entities & npx typeorm-model-generator -h localhost -d auclairm_espaceclient -p 3306 -u root -x  -e mysql -o entities --noConfig true --ce pascal --cp camel"
+}
