@@ -18,7 +18,7 @@ async function bootstrap() {
   const corsOptions = {
     origin: (origin, callback) => {
       console.log(origin);
-      if (allowedOrigins.includes(origin) || !origin) {
+      if (true) {
         callback(null, true);
       } else {
         callback(new Error('Origin not allowed by CORS'));
