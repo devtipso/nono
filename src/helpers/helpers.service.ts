@@ -10,6 +10,7 @@ import * as moment from 'moment';
 import { extname } from 'path'
 import { v4 as uuidv4 } from 'uuid';
 import fs = require('fs');
+import * as path from 'path';
 
 @Injectable()
 export class HelpersService {
@@ -107,5 +108,5 @@ export const InitQueryData = async (data: unknown): Promise<unknown> => {
 
     return await data
 }
-
-export const dir = './sources';
+const appDir = path.dirname(require.main.path);
+export const dir = appDir + '../../sources';
