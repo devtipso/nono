@@ -10,13 +10,15 @@ async function bootstrap() {
   app.useGlobalFilters(new HttpExceptionFilter());
   const allowedOrigins = [
     'http://localhost:4200',
-    'https://auclair.000webhostapp.com'
+    'https://auclair.000webhostapp.com',
+    'http://myauclair.cleverapps.io',
+    'http://myauclair.cleverapps.io/'
   ];
 
   const corsOptions = {
     origin: (origin, callback) => {
       console.log(origin);
-      if (allowedOrigins.includes(origin) || !origin) {
+      if (true) {
         callback(null, true);
       } else {
         callback(new Error('Origin not allowed by CORS'));
