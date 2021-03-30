@@ -37,7 +37,7 @@ import { ContartsModule } from './contarts/contarts.module';
       "database": "b9omf6ziddw3fdjfsbrr",
       "synchronize": false,
       "entities": [
-        "dist/entities/*{.ts,.js}"
+        "./entities/*{.ts,.js}"
       ]
     }
     ),
