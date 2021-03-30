@@ -25,11 +25,7 @@ async function bootstrap() {
       }
     },
   };
-  app.enableCors({
-            origin: false,
-            methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
-            credentials: true,
-        });
+  app.enableCors({ ...corsOptions });
   const port = process.env.PORT || 3000
   await app.listen(port);
 }
